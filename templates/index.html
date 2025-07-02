@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam Detector</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Your custom style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="m-0 p-0">
+
+    <!-- Custom background with gradient -->
+    <div class="spamBox flex items-center justify-center min-h-screen">
+
+        <!-- Content box -->
+        <div class="bg-white bg-opacity-10 p-8 rounded-xl shadow-lg backdrop-blur-md w-full max-w-md text-white text-center">
+           <h1 class="text-3xl font-bold mb-6 opacity-80">Spam Detection</h1>
+
+
+            <form method="POST" class="flex flex-col gap-4">
+<textarea
+  name="message"
+  placeholder="Enter your message..."
+  class="w-full h-52 p-5 text-xl font-semibold text-black placeholder-gray-400 bg-white bg-opacity-20 rounded-xl border border-black shadow-lg resize-none focus:outline-none focus:border-transparent focus:ring-0">
+  {{ message }}
+</textarea>
+
+
+
+                <button type="submit" class="btn">Check Spam</button>
+            </form>
+
+            {% if prediction %}
+<div>
+<h2 class="mt-10 px-6 py-3 border-3 border-black rounded-full text-black text-2xl font-bold inline-block bg-white bg-opacity-20 backdrop-blur-sm shadow-lg">
+  Prediction: {{ prediction }}
+</h2>
+
+
+</div>
+
+
+
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+.spamBox {
+  min-height: 100vh;
+
+  background: #200122;  /* fallback */
+  background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Safari/Chrome */
+  background: linear-gradient(to right, #6f0000, #200122);  /* Modern browsers */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+}
+
+   .btn {
+  background-image: linear-gradient(to right, #870000 0%, #190A05 51%, #870000 100%);
+  background-size: 200% auto;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  color: #ddd;
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+}
