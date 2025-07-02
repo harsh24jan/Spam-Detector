@@ -24,10 +24,10 @@
 <textarea
   name="message"
   placeholder="Enter your message..."
-  class="w-full h-52 p-5 text-xl font-semibold text-black placeholder-gray-400 bg-white bg-opacity-20 rounded-xl border border-black shadow-lg resize-none focus:outline-none focus:border-transparent focus:ring-0">
-  {{ message }}
-</textarea>
+  class="w-full h-52 p-5 text-xl font-semibold text-black placeholder-gray-400 bg-white bg-opacity-20 rounded-xl border border-black shadow-lg resize-none focus:outline-none focus:border-transparent focus:ring-0">{% if message %}{{ message }}{% endif %}</textarea>
 
+
+  
 
 
                 <button type="submit" class="btn">Check Spam</button>
